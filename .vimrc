@@ -1,3 +1,14 @@
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'Valloric/YouCompleteMe'
+call vundle#end()
+
+" NERD TREE
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 set nu
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
@@ -23,7 +34,6 @@ set cindent
 set lazyredraw  " redraw when we have to
 set wildmenu  " visual autocomplete for command menu
 set showmatch   " highlight matching [{()}]
-
 " SEARCH
 set ignorecase
 set smartcase
@@ -46,6 +56,7 @@ nnoremap ^ <nop>
 
 "  LEADER SHORTCUTS - Refer to here http://dougblack.io/words/a-good-vimrc.html
 imap jj <Esc>
+nnoremap <C-n> :NERDTreeToggle<CR>
 " from Damian Conway
 nnoremap ; :
 nnoremap : ;
@@ -60,4 +71,4 @@ cabbr <expr> %% expand('%:p:h')
 
 set history=1000
 set undolevels=1000
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore=*.swp,*.bak,*.pyc,*.classimap
