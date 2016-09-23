@@ -1,9 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/chrisjluc/Documents/School/2B/CS247/P1'
-let g:netrw_dirhist_2='/Users/chrisjluc/Documents/School/2B/CS247/P1/cs247straights'
-let g:netrw_dirhist_3='/Users/chrisjluc/Documents/School/2B/CS247/P1/cs247straights/tests'
-let g:netrw_dirhist_4='/Users/chrisjluc/Documents/School/2B/CS247/P1/cs247straights'
-let g:netrw_dirhist_5='/Users/chrisjluc/Documents/School/2B/CS247/P1/cs247straights/tests'
-let g:netrw_dirhist_6='/Users/chrisjluc/Documents/vessel-game-server/game-server'
-let g:netrw_dirhist_7='/Users/chrisjluc/Documents/vessel-game-server/game-server/models'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/'
+let g:netrw_dirhist_2='/Users'
+let g:netrw_dirhist_3='/Users/chris'
