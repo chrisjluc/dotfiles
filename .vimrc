@@ -5,6 +5,7 @@ Plugin 'fatih/vim-go'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'edkolev/tmuxline.vim'
 call vundle#end()
 
 "  LEADER SHORTCUTS - Refer to here http://dougblack.io/words/a-good-vimrc.html
@@ -14,6 +15,7 @@ imap jj <Esc>
 
 " NERD TREE
 autocmd vimenter * NERDTree
+autocmd VimEnter * wincmd p
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " Close nerdtree if it's the only window left
@@ -25,6 +27,9 @@ set ttimeoutlen=50
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+let g:airline_powerline_fonts = 1
+" So when nerdtree is toggled airline is still visible
+set laststatus=2
 
 "Tagbar
 let g:tagbar_autoclose = 1
@@ -55,6 +60,16 @@ let g:syntastic_python_checkers = ['pylint', 'flake8']
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 call pathogen#infect()
+
+" Vim-R Nvim-R-Tmux
+" Let R show in same window when tmux is activated
+let R_in_buffer = 0
+let R_applescript = 0
+let R_tmux_split = 1
+" Split vertically for R console
+let R_vsplit = 1
+" Turn off _ becoming <-
+let R_assign = 0
 
 syntax on
 filetype indent on
@@ -108,3 +123,9 @@ set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.classimap
 set backspace=indent,eol,start
+
+" Colors scheme
+" For dark background
+"let g:solarized_termcolors=256
+set t_Co=256
+colorscheme solarized

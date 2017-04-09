@@ -1,3 +1,15 @@
+alias tmux="TERM=screen-256color-bce tmux"
+
+if [ "$TERM" = "xterm" ] || [ "$TERM" = "xterm-256color" ]
+then
+    export TERM=xterm-256color
+    export HAS_256_COLORS=yes
+fi
+if [ "$TERM" = "screen" ] && [ "$HAS_256_COLORS" = "yes" ]
+then
+    export TERM=screen-256color
+fi
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
