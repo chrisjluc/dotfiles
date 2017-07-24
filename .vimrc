@@ -123,6 +123,7 @@ set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.classimap
 set backspace=indent,eol,start
+set colorcolumn=120
 
 " Colors scheme
 " For dark background
