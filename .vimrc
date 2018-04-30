@@ -130,3 +130,12 @@ set colorcolumn=120
 "let g:solarized_termcolors=256
 set t_Co=256
 colorscheme solarized
+
+let $PATH='$HOME/.cargo/bin:/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin'
+
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype typescript setlocal ts=2 sts=2 sw=2
+autocmd Filetype ts setlocal ts=2 sts=2 sw=2
+autocmd Filetype cpp setlocal ts=2 sts=2 sw=2
+autocmd Filetype c setlocal ts=2 sts=2 sw=2
+autocmd Filetype h setlocal ts=2 sts=2 sw=2
