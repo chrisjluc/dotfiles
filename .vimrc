@@ -6,6 +6,7 @@ Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()
 
 "  LEADER SHORTCUTS - Refer to here http://dougblack.io/words/a-good-vimrc.html
